@@ -1,0 +1,18 @@
+erdiagram Store
+
+notation=default
+
+entity Product {
+   id key
+}
+
+entity Order {
+   id key
+}
+
+entity OrderProduct 
+
+relationship has {
+
+   OrderProduct -> Order
+}
