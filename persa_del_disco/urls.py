@@ -20,3 +20,5 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+handler404 = 'persa_del_disco.views.handler404'

@@ -10,9 +10,22 @@ entity Order {
    id key
 }
 
-entity OrderProduct 
+entity OrderItem {
+   id key
+}
+
+entity Customer {
+   id key
+}
 
 relationship has {
+   Order[1] -> OrderItem[N]
+}
 
-   OrderProduct -> Order
+relationship are_in {
+   Product[N] -> OrderItem[N]
+}
+
+relationship makes {
+   Customer[1] -> Order[N]
 }
