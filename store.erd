@@ -4,10 +4,12 @@ notation=default
 
 entity Product {
    id key
+   name 
 }
 
 entity Order {
    id key
+   name
 }
 
 entity OrderItem {
@@ -16,6 +18,20 @@ entity OrderItem {
 
 entity Customer {
    id key
+   first_name
+   middle_name
+   last_name
+   email_adress
+}
+
+entity ProductCategory {
+   id key
+   name
+}
+
+entity ProductType {
+   id key
+   name
 }
 
 relationship has {
@@ -28,4 +44,12 @@ relationship are_in {
 
 relationship makes {
    Customer[1] -> Order[N]
+}
+
+relationship has {
+   ProductType[N] -> ProductCategory[1]
+}
+
+relationship has {
+   Product[N] -> ProductType[1] 
 }
